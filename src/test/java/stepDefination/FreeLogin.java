@@ -57,7 +57,7 @@ public class FreeLogin extends SetUPClass {
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='Submit']")));
 			// js.executeScript("arguments[0].click();", login_btn );
 			login_btn.click();
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 
 		} catch (NoSuchElementException e) {
 
@@ -143,7 +143,7 @@ public class FreeLogin extends SetUPClass {
 	public void user_logout_from_the_application() throws Throwable {
 
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(4000);
 			WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGOUT")));
 			js.executeScript("arguments[0].click();", logout);
 			Thread.sleep(3000);
