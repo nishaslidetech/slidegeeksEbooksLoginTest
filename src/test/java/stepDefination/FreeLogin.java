@@ -89,7 +89,7 @@ public class FreeLogin extends SetUPClass {
 			e.printStackTrace();
 		}
 
-		// verify that user is on shoping cart page
+		
 	}
 
 	@Then("^verify the checkout process$")
@@ -118,21 +118,10 @@ public class FreeLogin extends SetUPClass {
 
 			// verify that user is on paypal page
 
-			WebElement payWithCreditAndDebit = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='createAccount']")));
-			Thread.sleep(2000);
+			String verifyTitle = driver.getTitle();
+			System.out.println("Title = " + verifyTitle);
 
-			payWithCreditAndDebit.click();
-			Thread.sleep(3000);
-
-			String verifyPrice = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='css-ltr-10fi8ut']")))
-					.getText();
-			Thread.sleep(2000);
-
-			System.out.println("Text = " + verifyPrice);
-
-			driver.get(actualUrl);
+			driver.navigate().back();
 
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -143,17 +132,18 @@ public class FreeLogin extends SetUPClass {
 	public void user_logout_from_the_application() throws Throwable {
 
 		try {
-			Thread.sleep(4000);
-			WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGOUT")));
+			Thread.sleep(3000);
+			WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Logout']")));
 			js.executeScript("arguments[0].click();", logout);
 			Thread.sleep(3000);
 		} catch (NoSuchElementException e) {
 
 		}
 		String getUrl = driver.getCurrentUrl();
-
+		System.out.println("after logout url = " + getUrl);
 		Assert.assertTrue("Your are not on paypal page", actualUrl.contentEquals(getUrl));
 		Thread.sleep(3000);
 	}
 
 }
+
