@@ -153,11 +153,6 @@ public class PaypalCheckout extends SetUPClass {
 	public void paypal_popup_appears_and_user_navigates_back_to_my_account_page() throws Throwable {
 
 		try {
-			// verify papypal page
-			String currenturl = driver.getCurrentUrl();
-			System.out.println("url = " + currenturl);
-			Assert.assertTrue("user is not logout from the application", currenturl.equals(actualUrl));
-
 			// verify that user is on paypal page
 
 			String verifyTitle = driver.getTitle();
@@ -172,7 +167,7 @@ public class PaypalCheckout extends SetUPClass {
 
 	@Then("^delete the accounti$")
 	public void delete_the_accounti() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		WebElement Account = driver.findElement(
 				By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
