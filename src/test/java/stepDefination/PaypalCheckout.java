@@ -152,12 +152,13 @@ public class PaypalCheckout extends SetUPClass {
 	@Then("^paypal popup appears and user navigates back to my account page$")
 	public void paypal_popup_appears_and_user_navigates_back_to_my_account_page() throws Throwable {
 
-		// verify papypal page
-		String currenturl = driver.getCurrentUrl();
-		System.out.println("url = " + currenturl);
-		Assert.assertTrue("user is not logout from the application", currenturl.equals(actualUrl));
+		try {
+			// verify papypal page
+			String currenturl = driver.getCurrentUrl();
+			System.out.println("url = " + currenturl);
+			Assert.assertTrue("user is not logout from the application", currenturl.equals(actualUrl));
 
-		// verify that user is on paypal page
+			// verify that user is on paypal page
 
 			String verifyTitle = driver.getTitle();
 			System.out.println("Title = " + verifyTitle);
@@ -165,7 +166,7 @@ public class PaypalCheckout extends SetUPClass {
 			driver.navigate().back();
 
 		} catch (Exception e) {
-			// TODO: handle exception
+
 		}
 	}
 
