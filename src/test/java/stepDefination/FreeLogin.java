@@ -139,10 +139,7 @@ public class FreeLogin extends SetUPClass {
 		} catch (NoSuchElementException e) {
 
 		}
-		String getUrl = driver.getCurrentUrl();
-		System.out.println("after logout url = " + getUrl);
-		Assert.assertTrue("Your are not on paypal page", actualUrl.contentEquals(getUrl));
-		Thread.sleep(3000);
+		
 	}
 
 }
