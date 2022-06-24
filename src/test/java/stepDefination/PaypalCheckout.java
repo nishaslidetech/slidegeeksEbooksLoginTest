@@ -141,7 +141,7 @@ public class PaypalCheckout extends SetUPClass {
 
 			js.executeScript("arguments[0].click();", place_order_btn);
 
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -157,21 +157,16 @@ public class PaypalCheckout extends SetUPClass {
 		System.out.println("url = " + currenturl);
 		Assert.assertTrue("user is not logout from the application", currenturl.equals(actualUrl));
 
-		Thread.sleep(2000);
-		WebElement payWithCreditAndDebit = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='createAccount']")));
-		Thread.sleep(2000);
+		// verify that user is on paypal page
 
-		payWithCreditAndDebit.click();
-		Thread.sleep(3000);
+			String verifyTitle = driver.getTitle();
+			System.out.println("Title = " + verifyTitle);
 
-		String verifyPrice = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='css-ltr-10fi8ut']"))).getText();
-		Thread.sleep(2000);
+			driver.navigate().back();
 
-		System.out.println("Text = " + verifyPrice);
-
-		driver.get(actualUrl);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	@Then("^delete the accounti$")
