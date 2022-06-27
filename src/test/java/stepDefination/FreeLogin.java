@@ -97,9 +97,7 @@ public class FreeLogin extends SetUPClass {
 		try {
 
 			// select paypal option
-			String currenturl = driver.getCurrentUrl();
-			System.out.println("url = " + currenturl);
-			Assert.assertTrue("user is not logout from the application", currenturl.equals(actualUrl));
+			
 
 			Thread.sleep(2000);
 
