@@ -50,7 +50,7 @@ public class GoogleLogin extends SetUPClass {
 
 	@Then("^click on google option$")
 	public void click_on_google_option() throws Throwable {
-		try {
+		/*try {
 			WebElement google = SetUPClass
 					.elementToBeClickable(By.xpath("//form[@id='site_signup_form']//img[@id='google-signin-btn']"));
 			google.click();
@@ -58,12 +58,12 @@ public class GoogleLogin extends SetUPClass {
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	@Then("^enter valid credentials$")
 	public void enter_valid_credentials() throws Throwable {
-		driver.manage().window().maximize();
+		/*driver.manage().window().maximize();
 
 		// Store the CurrentWindow for future reference
 		// String handle = " ";
@@ -112,7 +112,7 @@ public class GoogleLogin extends SetUPClass {
 			}
 		}
 		driver.switchTo().window(currentWindow);
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
 
 	}
 
@@ -123,32 +123,32 @@ public class GoogleLogin extends SetUPClass {
 
 	@Then("^download the selected ebbok$")
 	public void download_the_selected_ebbok() throws Throwable {
-		WebElement download = SetUPClass.elementToBeClickable(By.xpath("//a[@id='download_8']"));
+		/*WebElement download = SetUPClass.elementToBeClickable(By.xpath("//a[@id='download_8']"));
 		Thread.sleep(3000);
 		download.click();
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
 
 	}
 
 	@Then("^logout from the application$")
 	public void logout_from_the_application() throws Throwable {
-		try {
+		/*try {
 			Thread.sleep(3000);
 			WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGOUT")));
 			js.executeScript("arguments[0].click();", logout);
 			Thread.sleep(3000);
 		} catch (NoSuchElementException e) {
 
-		}
+		}*/
 	}
 
 	@Then("^verify that user is successfully logged out$")
 	public void verify_that_user_is_successfully_logged_out() throws Throwable {
 
-		String getUrl = driver.getCurrentUrl();
+		/*String getUrl = driver.getCurrentUrl();
 		System.out.println(getUrl + "=getUrl");
 		Assert.assertTrue("Your are not on paypal page", actualUrl.contentEquals(getUrl));
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
 	}
 
 }
