@@ -43,12 +43,12 @@ public class PaidLogin extends SetUPClass {
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='E-mail Address']")));
 			Thread.sleep(2000);
 			email_Address.clear();
-			email_Address.sendKeys("nisha.dhiman@slidetech.in");
+			email_Address.sendKeys("sumit.kumar@slidetech.in");
 
 			WebElement password = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Password']")));
 			password.clear();
-			password.sendKeys("Qwerty@1");
+			password.sendKeys("redhat2090");
 
 			WebElement login_btn = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='Submit']")));

@@ -57,7 +57,7 @@ public class FreeLogin extends SetUPClass {
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='Submit']")));
 			// js.executeScript("arguments[0].click();", login_btn );
 			login_btn.click();
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 
 		} catch (NoSuchElementException e) {
 
@@ -89,7 +89,7 @@ public class FreeLogin extends SetUPClass {
 			e.printStackTrace();
 		}
 
-		// verify that user is on shoping cart page
+		
 	}
 
 	@Then("^verify the checkout process$")
@@ -97,9 +97,7 @@ public class FreeLogin extends SetUPClass {
 		try {
 
 			// select paypal option
-			String currenturl = driver.getCurrentUrl();
-			System.out.println("url = " + currenturl);
-			Assert.assertTrue("user is not logout from the application", currenturl.equals(actualUrl));
+			
 
 			Thread.sleep(2000);
 
@@ -139,6 +137,11 @@ public class FreeLogin extends SetUPClass {
 		} catch (NoSuchElementException e) {
 
 		}
+<<<<<<< HEAD
+=======
+		
+>>>>>>> ea9835a07acbe753ac386794c15c6d90b0f106bc
 	}
 
 }
+
