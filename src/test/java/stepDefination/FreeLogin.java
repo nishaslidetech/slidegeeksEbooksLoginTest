@@ -27,7 +27,7 @@ public class FreeLogin extends SetUPClass {
 	public void click_on_sign_in_button() throws InterruptedException {
 		try {
 			WebElement login = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()=")));
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Login']")));
 			login.click();
 			Thread.sleep(3000);
 		} catch (WebDriverException e) {
@@ -137,10 +137,7 @@ public class FreeLogin extends SetUPClass {
 		} catch (NoSuchElementException e) {
 
 		}
-<<<<<<< HEAD
-=======
-		
->>>>>>> ea9835a07acbe753ac386794c15c6d90b0f106bc
+
 	}
 
 }
