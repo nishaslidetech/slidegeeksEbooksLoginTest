@@ -106,6 +106,11 @@ public class FacebookLogin extends SetUPClass {
 				} catch (NoSuchElementException e) {
 
 				}
+				if (!driver.findElements(By.xpath("//div[@class='login-attempt-popup']")).isEmpty()) {
+					WebElement approve = wait
+							.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='confirm-approve']")));
+					approve.click();
+				}
 				// to verify the continue button
 				// button[normalize-space()='Yes, Continue']
 

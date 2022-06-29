@@ -27,7 +27,7 @@ public class FreeLogin extends SetUPClass {
 	public void click_on_sign_in_button() throws InterruptedException {
 		try {
 			WebElement login = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Login']")));
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()=")));
 			login.click();
 			Thread.sleep(3000);
 		} catch (WebDriverException e) {
@@ -118,21 +118,10 @@ public class FreeLogin extends SetUPClass {
 
 			// verify that user is on paypal page
 
-			WebElement payWithCreditAndDebit = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='createAccount']")));
-			Thread.sleep(2000);
+			String verifyTitle = driver.getTitle();
+			System.out.println("Title = " + verifyTitle);
 
-			payWithCreditAndDebit.click();
-			Thread.sleep(3000);
-
-			String verifyPrice = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='css-ltr-10fi8ut']")))
-					.getText();
-			Thread.sleep(2000);
-
-			System.out.println("Text = " + verifyPrice);
-
-			driver.get(actualUrl);
+			driver.navigate().back();
 
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -144,16 +133,12 @@ public class FreeLogin extends SetUPClass {
 
 		try {
 			Thread.sleep(3000);
-			WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGOUT")));
+			WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Logout']")));
 			js.executeScript("arguments[0].click();", logout);
 			Thread.sleep(3000);
 		} catch (NoSuchElementException e) {
 
 		}
-		String getUrl = driver.getCurrentUrl();
-
-		Assert.assertTrue("Your are not on paypal page", actualUrl.contentEquals(getUrl));
-		Thread.sleep(3000);
 	}
 
 }
