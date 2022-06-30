@@ -90,7 +90,7 @@ public class StripeCheckout extends SetUPClass {
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 		// Thread.sleep(3000);
 		register_btn.click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 
 	@Then("^verify that user is successfully signup$")
