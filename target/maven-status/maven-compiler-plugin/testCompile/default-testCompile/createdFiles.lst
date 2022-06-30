@@ -1,9 +1,0 @@
-BaseClass\SetUPClass.class
-stepDefination\StripeCheckout.class
-stepDefination\PaypalCheckout.class
-stepDefination\FacebookLogin.class
-stepDefination\GoogleLogin.class
-stepDefination\PaidLogin.class
-stepDefination\TakeImageStep.class
-BaseClass\TestRun.class
-stepDefination\FreeLogin.class

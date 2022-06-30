@@ -20,6 +20,7 @@ public class GoogleLogin extends SetUPClass {
 	public void user_is_on_Home_Page() throws Throwable {
 		ClearGoggleCache();
 		driver.get(AppURL);
+		Thread.sleep(3000);
 		
 	}
 
