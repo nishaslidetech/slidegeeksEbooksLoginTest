@@ -119,7 +119,7 @@ public class GoogleLogin extends SetUPClass {
 			}
 		}
 		driver.switchTo().window(currentWindow);
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 
 	}
 
