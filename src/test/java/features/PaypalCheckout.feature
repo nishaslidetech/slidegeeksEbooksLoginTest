@@ -1,7 +1,7 @@
 @EbooksPaypal
 
-Feature: Ebooks Signup Login test
-  Scenario: Ebooks Signup Login test
+Feature: Ebooks paypal Signup Login test
+  Scenario: Ebooks paypal Signup Login test
   Given Go to the geeks Home pagei 
   Then click on signup buttoni
   Then user creates a new account

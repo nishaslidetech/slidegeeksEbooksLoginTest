@@ -1,6 +1,6 @@
 @Ebookstripe
-Feature: Ebooks Signup Login test
-  Scenario: Ebooks Signup Login test
+Feature: Ebooks stripe Signup Login test
+  Scenario: Ebooks stripe Signup Login test
   Given Go to the geeks Home page 
   Then click on signup button
   Then User creates a new account
