@@ -110,7 +110,7 @@ public class GoogleLogin extends SetUPClass {
 						ExpectedConditions.elementToBeClickable(By.cssSelector("#passwordNext > div > button > span")));
 				g_login_btn2.click();
 
-				Thread.sleep(5000);
+				
 				/*if (!driver.findElements(By.xpath("//div[@class='login-attempt-popup']")).isEmpty()) {
 					WebElement approve = wait
 							.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='confirm-approve']")));
