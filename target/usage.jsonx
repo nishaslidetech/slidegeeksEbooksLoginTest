@@ -1,1 +1,146 @@
-[]
+[
+  {
+    "source": "^Go to the geeks Home page$",
+    "steps": [
+      {
+        "name": "Go to the geeks Home page",
+        "aggregatedDurations": {
+          "median": 15.5916927,
+          "average": 15.5916927
+        },
+        "durations": [
+          {
+            "duration": 15.5916927,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^click on signup button$",
+    "steps": [
+      {
+        "name": "click on signup button",
+        "aggregatedDurations": {
+          "median": 9.3851961,
+          "average": 9.3851961
+        },
+        "durations": [
+          {
+            "duration": 9.3851961,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User creates a new account$",
+    "steps": [
+      {
+        "name": "User creates a new account",
+        "aggregatedDurations": {
+          "median": 31.0068215,
+          "average": 31.0068215
+        },
+        "durations": [
+          {
+            "duration": 31.0068215,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^verify that user is successfully signup$",
+    "steps": [
+      {
+        "name": "verify that user is successfully signup",
+        "aggregatedDurations": {
+          "median": 9.943E-4,
+          "average": 9.943E-4
+        },
+        "durations": [
+          {
+            "duration": 9.943E-4,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^click on ebooks button$",
+    "steps": [
+      {
+        "name": "click on ebooks button",
+        "aggregatedDurations": {
+          "median": 30.4259156,
+          "average": 30.4259156
+        },
+        "durations": [
+          {
+            "duration": 30.4259156,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^verify the checkout process via stripe$",
+    "steps": [
+      {
+        "name": "verify the checkout process via stripe",
+        "aggregatedDurations": {
+          "median": 41.4417295,
+          "average": 41.4417295
+        },
+        "durations": [
+          {
+            "duration": 41.4417295,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^delete the account$",
+    "steps": [
+      {
+        "name": "delete the account",
+        "aggregatedDurations": {
+          "median": 38.6585794,
+          "average": 38.6585794
+        },
+        "durations": [
+          {
+            "duration": 38.6585794,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^verify the account is successfully deleted$",
+    "steps": [
+      {
+        "name": "verify the account is successfully deleted",
+        "aggregatedDurations": {
+          "median": 4.7187165,
+          "average": 4.7187165
+        },
+        "durations": [
+          {
+            "duration": 4.7187165,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:11"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -76,7 +76,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>Project Name</td>
                           <td>1</td>
-                        <td>20 Jul 2022, 12:42</td>
+                        <td>20 Jul 2022, 14:36</td>
           </tr>
         </tbody>
       </table>
@@ -123,17 +123,17 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Ebookstripe</td>
-                    <td >0</td>
-          <td  class="failed"    >1</td>
+                    <td  class="passed"    >1</td>
+          <td >0</td>
           <td class="total">1</td>
-          <td      class="passed"    >5</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >2</td>
+          <td      class="passed"    >8</td>
+          <td >0</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">8</td>
-          <td class="duration" data-value="92705336200">1m 32s 705ms</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="171229645600">2m 51s 229ms</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -161,9 +161,9 @@ $(document).ready(function() {
   </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Ebooks stripe Signup Login test</span>
   
@@ -174,15 +174,15 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -192,14 +192,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">Go to the geeks Home page</span>
   
-  <span class="lead-duration duration">15s 776ms</span>
+  <span class="lead-duration duration">15s 591ms</span>
 
   </div>
 
@@ -220,7 +220,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">click on signup button</span>
   
-  <span class="lead-duration duration">6s 731ms</span>
+  <span class="lead-duration duration">9s 385ms</span>
 
   </div>
 
@@ -241,7 +241,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User creates a new account</span>
   
-  <span class="lead-duration duration">30s 818ms</span>
+  <span class="lead-duration duration">31s 006ms</span>
 
   </div>
 
@@ -283,7 +283,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">click on ebooks button</span>
   
-  <span class="lead-duration duration">21s 042ms</span>
+  <span class="lead-duration duration">30s 425ms</span>
 
   </div>
 
@@ -300,31 +300,15 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify the checkout process via stripe</span>
   
-  <span class="lead-duration duration">18s 337ms</span>
+  <span class="lead-duration duration">41s 441ms</span>
 
   </div>
 
         
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
-          <a>Error message</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details">
-        <pre>java.lang.AssertionError: title does not matched
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at stepDefination.StripeCheckout.verify_the_checkout_process_via_stripe(StripeCheckout.java:160)
-	at ✽.verify the checkout process via stripe(file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/stripecheckout.feature:9)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
         
@@ -337,11 +321,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">delete the account</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">38s 658ms</span>
 
   </div>
 
@@ -358,11 +342,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify the account is successfully deleted</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">4s 718ms</span>
 
   </div>
 
@@ -383,7 +367,7 @@ $(document).ready(function() {
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-3">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -395,13 +379,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-3" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">stepDefination.TakeImageStep.tearDown(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">159ms</span>
+  <span class="lead-duration duration">004ms</span>
 
           </div>
 
@@ -409,17 +393,6 @@ $(document).ready(function() {
 
           
           
-  <div class="embeddings inner-level">
-                <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding_embedding_-1223371785" class="collapsable-control">
-      <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1223371785.png" target="_blank"><span class="download-button glyphicon glyphicon-download-alt"></span></a>
-    </div>
-    <div id="embedding_embedding_-1223371785" class="collapse collapsable-detail">
-      <span class="embedding-content"><img src="embeddings/embedding_-1223371785.png"></span>
-    </div>
-  </div>
-        </div>
 
         </div>
           </div>
