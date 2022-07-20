@@ -51,9 +51,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                34,
-                3,
-                10,
+                0,
+                1,
+                8,
                 0,
                 0
             ],
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 47) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 9) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -107,8 +107,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                3,
-                3
+                0,
+                1
             ],
             backgroundColor: [
                 "#00B000",
@@ -144,7 +144,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 6) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -157,8 +157,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   3,
-                   3
+                   0,
+                   1
                ],
                backgroundColor: [
                 "#00B000",
@@ -191,7 +191,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 6) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -233,7 +233,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>Project Name</td>
                           <td>1</td>
-                        <td>20 Jul 2022, 12:42</td>
+                        <td>20 Jul 2022, 14:05</td>
           </tr>
         </tbody>
       </table>
@@ -323,36 +323,6 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="file-src-test-java-features-FreeLogin-feature.html">Download Ebooks via free login</a></td>
-        
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-        <td      class="passed"    >7</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">7</td>
-        <td class="duration" data-value="114238720400">1m 54s 238ms</td>
-        <td class="passed">Passed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-PaidLogin-feature.html">Download Ebooks via paid login</a></td>
-        
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-        <td      class="passed"    >6</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">6</td>
-        <td class="duration" data-value="55736522800">55s 736ms</td>
-        <td class="passed">Passed</td>
-      </tr>
-          <tr>
         <td class="tagname"><a href="file-src-test-java-features-GoogleLogin-feature.html">Ebooks Login test via Google</a></td>
         
         <td >0</td>
@@ -364,84 +334,39 @@ $(document).ready(function() {
         <td >0</td>
         <td >0</td>
         <td class="total">9</td>
-        <td class="duration" data-value="57928979600">57s 928ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-FacebookLogin-feature.html">Ebooks Login test via faceboook</a></td>
-        
-        <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
-        <td      class="passed"    >7</td>
-        <td      class="failed"    >1</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">8</td>
-        <td class="duration" data-value="148802587500">2m 28s 802ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-PaypalCheckout-feature.html">Ebooks paypal Signup Login test</a></td>
-        
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-        <td      class="passed"    >9</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">9</td>
-        <td class="duration" data-value="163250767900">2m 43s 250ms</td>
-        <td class="passed">Passed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="file-src-test-java-features-stripecheckout-feature.html">Ebooks stripe Signup Login test</a></td>
-        
-        <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
-        <td      class="passed"    >5</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >2</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">8</td>
-        <td class="duration" data-value="92705336200">1m 32s 705ms</td>
+        <td class="duration" data-value="16199736400">16s 199ms</td>
         <td class="failed">Failed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
-      <td>6</td>
-            <td>3</td>
-      <td>3</td>
-      <td>6</td>
-      <td>34</td>
-      <td>3</td>
-      <td>10</td>
+      <td>1</td>
+            <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>8</td>
       <td>0</td>
       <td>0</td>
-      <td>47</td>
-      <td class="duration">10m 32s 662ms</td>
+      <td>9</td>
+      <td class="duration">16s 199ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-            <td>50.00%</td>
-      <td>50.00%</td>
+            <td>0.00%</td>
+      <td>100.00%</td>
       <td></td>
-      <td>72.34%</td>
-      <td>6.38%</td>
-      <td>21.28%</td>
+      <td>0.00%</td>
+      <td>11.11%</td>
+      <td>88.89%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
       <td></td>
-      <td>50.00%</td>
+      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>
