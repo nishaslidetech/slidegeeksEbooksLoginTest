@@ -171,8 +171,9 @@ public class StripeCheckout extends SetUPClass {
 
 				WebElement Stripe_back1 = driver
 						.findElement(By.xpath("//div[@class='Header-backArrowContainer']//*[name()='svg']"));
-				Thread.sleep(2000);
-				Stripe_back1.click();
+				Thread.sleep(3000);
+				//Stripe_back1.click();
+				js.executeScript("agguments[0].click();", Stripe_back1);
 				Thread.sleep(4000);
 
 			}

@@ -42,7 +42,7 @@ public class GoogleLogin extends SetUPClass {
 		try {
 			List<WebElement> buyNow = driver.findElements(By.linkText("BUY NOW"));
 			buyNow.get(1).click();
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -55,6 +55,7 @@ public class GoogleLogin extends SetUPClass {
 		try {
 			WebElement google = SetUPClass
 					.elementToBeClickable(By.xpath("//form[@id='site_signup_form']//img[@id='google-signin-btn']"));
+			Thread.sleep(2000);
 			google.click();
 			Thread.sleep(3000);
 		} catch (WebDriverException e) {
