@@ -145,7 +145,6 @@ public class StripeCheckout extends SetUPClass {
 
 				Thread.sleep(3000);
 
-
 				WebElement place_order_btn = wait
 						.until(ExpectedConditions.elementToBeClickable(By.id("hikabtn_checkout_next")));
 				Thread.sleep(3000);
@@ -154,9 +153,8 @@ public class StripeCheckout extends SetUPClass {
 
 				// verify the page and navigate back to account page
 
-			
 				String pp_page_title = driver.getTitle();
-				
+
 				System.out.println("Title of the Page is --> " + pp_page_title);
 
 				Assert.assertTrue("title does not matched", driver.getTitle().contains("SlideTeam Geeks Inc"));
@@ -171,8 +169,8 @@ public class StripeCheckout extends SetUPClass {
 
 				Assert.assertTrue("Your are not on paypal page", verifyPrice.contentEquals("$19.99"));
 
-				WebElement Stripe_back1 = driver.findElement(By.cssSelector(
-						"#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+				WebElement Stripe_back1 = driver
+						.findElement(By.xpath("//div[@class='Header-backArrowContainer']//*[name()='svg']"));
 				Thread.sleep(2000);
 				Stripe_back1.click();
 				Thread.sleep(4000);
@@ -187,13 +185,11 @@ public class StripeCheckout extends SetUPClass {
 	public void delete_the_account() throws Throwable {
 		Thread.sleep(2000);
 
-		WebElement Account = driver.findElement(
-				By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
+		WebElement Account = driver.findElement(By.xpath("//a[normalize-space()='Account']"));
 		Thread.sleep(3000);
 		Account.click();
 		Thread.sleep(3000);
-		WebElement Delete_Account = driver
-				.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
+		WebElement Delete_Account = driver.findElement(By.xpath("//a[normalize-space()='Delete Account']"));
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].scrollIntoView();", Delete_Account);
 		Thread.sleep(3000);
@@ -203,11 +199,11 @@ public class StripeCheckout extends SetUPClass {
 		Thread.sleep(3000);
 		Delete_Account_reason.click();
 		Thread.sleep(3000);
-		WebElement Delete_Profile = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div/div[3]/button[1]"));
+		WebElement Delete_Profile = driver.findElement(By.xpath("//button[@id='delete_profile']"));
 		Thread.sleep(3000);
 		Delete_Profile.click();
 		Thread.sleep(3000);
-		WebElement No_Delete = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[3]/button[2]"));
+		WebElement No_Delete = driver.findElement(By.xpath("//button[@class='btn btn-default button_2']"));
 		Thread.sleep(3000);
 		No_Delete.click();
 		Thread.sleep(5000);

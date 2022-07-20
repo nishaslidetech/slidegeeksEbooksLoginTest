@@ -169,13 +169,11 @@ public class PaypalCheckout extends SetUPClass {
 	public void delete_the_accounti() throws Throwable {
 		Thread.sleep(3000);
 
-		WebElement Account = driver.findElement(
-				By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
+		WebElement Account = driver.findElement(By.xpath("//a[normalize-space()='Account']"));
 		Thread.sleep(3000);
 		Account.click();
 		Thread.sleep(3000);
-		WebElement Delete_Account = driver
-				.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
+		WebElement Delete_Account = driver.findElement(By.xpath("//a[normalize-space()='Delete Account']"));
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].scrollIntoView();", Delete_Account);
 		Thread.sleep(3000);
@@ -185,11 +183,11 @@ public class PaypalCheckout extends SetUPClass {
 		Thread.sleep(3000);
 		Delete_Account_reason.click();
 		Thread.sleep(3000);
-		WebElement Delete_Profile = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div/div[3]/button[1]"));
+		WebElement Delete_Profile = driver.findElement(By.xpath("//button[@id='delete_profile']"));
 		Thread.sleep(3000);
 		Delete_Profile.click();
 		Thread.sleep(3000);
-		WebElement No_Delete = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[3]/button[2]"));
+		WebElement No_Delete = driver.findElement(By.xpath("//button[@class='btn btn-default button_2']"));
 		Thread.sleep(3000);
 		No_Delete.click();
 		Thread.sleep(5000);
