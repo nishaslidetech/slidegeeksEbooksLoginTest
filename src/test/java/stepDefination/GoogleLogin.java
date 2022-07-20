@@ -21,7 +21,7 @@ public class GoogleLogin extends SetUPClass {
 		ClearGoggleCache();
 		driver.get(AppURL);
 		Thread.sleep(3000);
-		
+
 	}
 
 	@Then("^click on Ebook button$")
@@ -56,7 +56,7 @@ public class GoogleLogin extends SetUPClass {
 			WebElement google = SetUPClass
 					.elementToBeClickable(By.xpath("//form[@id='site_signup_form']//img[@id='google-signin-btn']"));
 			Thread.sleep(2000);
-			google.click();
+			js.executeScript("arguments[0].click();", google);
 			Thread.sleep(3000);
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
@@ -111,12 +111,12 @@ public class GoogleLogin extends SetUPClass {
 						ExpectedConditions.elementToBeClickable(By.cssSelector("#passwordNext > div > button > span")));
 				g_login_btn2.click();
 
-				
-				/*if (!driver.findElements(By.xpath("//div[@class='login-attempt-popup']")).isEmpty()) {
-					WebElement approve = wait
-							.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='confirm-approve']")));
-					approve.click();
-				}*/
+				/*
+				 * if (!driver.findElements(By.xpath("//div[@class='login-attempt-popup']")).
+				 * isEmpty()) { WebElement approve = wait
+				 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+				 * "//input[@id='confirm-approve']"))); approve.click(); }
+				 */
 			}
 		}
 		driver.switchTo().window(currentWindow);
