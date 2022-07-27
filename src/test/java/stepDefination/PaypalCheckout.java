@@ -67,12 +67,12 @@ public class PaypalCheckout extends SetUPClass {
 		Thread.sleep(2000);
 
 		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#register_email")));
-		// Thread.sleep(3000);
+		new_email.clear();;
 		new_email.sendKeys(full_email);
 		Thread.sleep(3000);
 
 		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#register_password")));
-		// Thread.sleep(3000);
+		password.clear();
 		password.sendKeys("Geeks@123");
 		Thread.sleep(3000);
 
