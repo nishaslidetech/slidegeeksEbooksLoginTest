@@ -108,7 +108,8 @@ public class StripeCheckout extends SetUPClass {
 
 			try {
 				List<WebElement> buyNow = driver.findElements(By.xpath("//input[@value = 'BUY NOW']"));
-				buyNow.get(4).click();
+				js.executeScript("arguments[0].scrollIntoView(true);", buyNow);
+				buyNow.get(3).click();
 				Thread.sleep(3000);
 			} catch (WebDriverException e) {
 				// TODO Auto-generated catch block
@@ -173,7 +174,7 @@ public class StripeCheckout extends SetUPClass {
 						.findElement(By.xpath("//div[@class='Header-backArrowContainer']//*[name()='svg']"));
 				Thread.sleep(3000);
 				Stripe_back1.click();
-				//js.executeScript("agruments[0].click();", Stripe_back1);
+				// js.executeScript("agruments[0].click();", Stripe_back1);
 				Thread.sleep(4000);
 
 			}
