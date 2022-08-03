@@ -123,14 +123,18 @@ public class FacebookLogin extends SetUPClass {
 
 	@Then("^Verify that user is successfully logged in$")
 	public void verify_that_user_is_successfully_logged_in() throws Throwable {
-
+		Thread.sleep(1000);
 	}
 
 	@Then("^Download the selected ebbok$")
 	public void download_the_selected_ebbok() throws Throwable {
+		
+		System.out.println("url after facebook signup = "+ driver.getCurrentUrl());
+		Thread.sleep(2000);
 		try {
 			WebElement download = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_8']")));
+			js.executeScript("arguments[0].scrollIntoView(true);",download);
 			Thread.sleep(2000);
 			download.click();
 			Thread.sleep(3000);
