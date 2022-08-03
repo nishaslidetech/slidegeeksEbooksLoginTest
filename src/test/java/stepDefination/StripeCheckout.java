@@ -208,7 +208,7 @@ public class StripeCheckout extends SetUPClass {
 		WebElement No_Delete = driver.findElement(By.xpath("//button[@class='btn btn-default button_2']"));
 		Thread.sleep(3000);
 		No_Delete.click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 	}
 
