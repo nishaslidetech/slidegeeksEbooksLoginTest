@@ -112,7 +112,7 @@ public class GoogleLogin extends SetUPClass {
 					File scr = wait
 							.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@id = 'captchaimg']")))
 							.getScreenshotAs(OutputType.FILE);
-					String captchaImg = "capthaimg" + ".png";
+					String captchaImg = "capthaimg" + ".jpg";
 					String path = System.getProperty("user.dir") + "/screenshots/" + captchaImg;
 					FileHandler.copy(scr, new File(path));
 					ITesseract img = new Tesseract();
