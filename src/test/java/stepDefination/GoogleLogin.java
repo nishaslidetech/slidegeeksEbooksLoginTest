@@ -119,8 +119,7 @@ public class GoogleLogin extends SetUPClass {
 							.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type = 'text']")));
 					captchaTextBox.sendKeys(imgtext);
 
-					WebElement next = wait.until(ExpectedConditions
-							.elementToBeClickable(By.cssSelector("#identifierNext > div > button > span")));
+					WebElement next = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Next")));
 					next.click();
 
 				}
