@@ -2,6 +2,7 @@ package stepDefination;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -43,9 +44,10 @@ public class roughq {
 		driver.manage().window().maximize();
 
 		// driver.get(AppURL);
-		driver.manage().timeouts().implicitlyWait(9000, TimeUnit.MILLISECONDS);
-		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
-		wait = new WebDriverWait(driver, 30);
+
+		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		js = (JavascriptExecutor) driver;
 
 		driver.get("https://www.irctc.co.in/nget/train-search");
@@ -55,9 +57,9 @@ public class roughq {
 		js.executeScript("arguments[0].click();", login);
 
 		Thread.sleep(3000);
-		List <WebElement> data = driver.findElements(By.xpath("//img[@border = '0']"));
+		List<WebElement> data = driver.findElements(By.xpath("//img[@border = '0']"));
 		Thread.sleep(3000);
-		
+
 		File scr = data.get(1).getScreenshotAs(OutputType.FILE);
 		String captchaImg = "capthaimg" + ".png";
 		String path = System.getProperty("user.dir") + "/screenshots/" + captchaImg;

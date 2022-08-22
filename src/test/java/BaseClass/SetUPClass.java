@@ -64,9 +64,9 @@ public class SetUPClass {
 			driver.manage().window().maximize();
 
 			// driver.get(AppURL);
-			driver.manage().timeouts().implicitlyWait(9000, TimeUnit.MILLISECONDS);
-			driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
-			wait = new WebDriverWait(driver, 30);
+			driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			js = (JavascriptExecutor) driver;
 		}
 		// if (browser.equalsIgnoreCase("firefox"))
@@ -76,9 +76,9 @@ public class SetUPClass {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(9000, TimeUnit.MILLISECONDS);
-			driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
-			wait = new WebDriverWait(driver, 30);
+			driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			js = (JavascriptExecutor) driver;
 
 			Thread.sleep(1000);
