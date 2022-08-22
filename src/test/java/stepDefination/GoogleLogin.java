@@ -106,27 +106,27 @@ public class GoogleLogin extends SetUPClass {
 				g_login_btn1.click();
 				Thread.sleep(3000);
 
-				if (!driver.findElements(By.xpath("//input[@type = 'text']")).isEmpty()) {
-					Thread.sleep(3000);
-					
-					File scr = wait
-							.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@id = 'captchaimg']")))
-							.getScreenshotAs(OutputType.FILE);
-					String captchaImg = "capthaimg" + ".jpeg";
-					String path = System.getProperty("user.dir") + "/screenshots/" + captchaImg;
-					FileHandler.copy(scr, new File(path));
-					ITesseract img = new Tesseract();
-					String imgtext = img.doOCR(new File(path));
-					WebElement captchaTextBox = wait
-							.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type = 'text']")));
-					captchaTextBox.sendKeys(imgtext);
-
-					WebElement next = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Next")));
-					next.click();
+				/*
+				 * if (!driver.findElements(By.xpath("//input[@type = 'text']")).isEmpty()) {
+				 * Thread.sleep(3000);
+				 * 
+				 * File scr = wait .until(ExpectedConditions.elementToBeClickable(By.
+				 * xpath("//img[@id = 'captchaimg']"))) .getScreenshotAs(OutputType.FILE);
+				 * String captchaImg = "capthaimg" + ".png"; String path =
+				 * System.getProperty("user.dir") + "/screenshots/" + captchaImg;
+				 * FileHandler.copy(scr, new File(path)); ITesseract img = new Tesseract();
+				 * String imgtext = img.doOCR(new File(path)); WebElement captchaTextBox = wait
+				 * .until(ExpectedConditions.elementToBeClickable(By.
+				 * xpath("//input[@type = 'text']"))); captchaTextBox.sendKeys(imgtext);
+				 * 
+				 * WebElement next =
+				 * wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Next")));
+				 * next.click();
+				 */
 
 				}
 
-				Thread.sleep(90000000);
+				Thread.sleep(2000);
 				WebElement g_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 						"/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input")));
 
