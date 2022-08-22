@@ -59,9 +59,9 @@ public class roughq {
 		Thread.sleep(3000);
 		
 		File scr = data.get(1).getScreenshotAs(OutputType.FILE);
-		
-		//String path = System.getProperty("user.dir") + "/screenshots/captcha.png";
-		//FileHandler.copy(scr, new File(path));
+		String captchaImg = "capthaimg" + ".png";
+		String path = System.getProperty("user.dir") + "/screenshots/" + captchaImg;
+		FileHandler.copy(scr, new File(path));
 		ITesseract img = new Tesseract();
 		String imgtext = img.doOCR(new File(scr.toString()));
 		WebElement captchaTextBox = wait
