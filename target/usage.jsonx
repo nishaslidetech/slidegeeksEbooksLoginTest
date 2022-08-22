@@ -1,125 +1,17 @@
 [
   {
-    "source": "^Go to the Home page$",
+    "source": "^user is on Home Page$",
     "steps": [
       {
-        "name": "Go to the Home page",
+        "name": "user is on Home Page",
         "aggregatedDurations": {
-          "median": 14.7159458,
-          "average": 14.7159458
+          "median": 26.5194152,
+          "average": 26.5194152
         },
         "durations": [
           {
-            "duration": 14.7159458,
-            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/FacebookLogin.feature:5"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^Click on ebook button$",
-    "steps": [
-      {
-        "name": "Click on ebook button",
-        "aggregatedDurations": {
-          "median": 7.9136533,
-          "average": 7.9136533
-        },
-        "durations": [
-          {
-            "duration": 7.9136533,
-            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/FacebookLogin.feature:6"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^Click on Buynow option$",
-    "steps": [
-      {
-        "name": "Click on Buynow option",
-        "aggregatedDurations": {
-          "median": 3.1662191,
-          "average": 3.1662191
-        },
-        "durations": [
-          {
-            "duration": 3.1662191,
-            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/FacebookLogin.feature:7"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^Click on facebook option$",
-    "steps": [
-      {
-        "name": "Click on facebook option",
-        "aggregatedDurations": {
-          "median": 5.1988122,
-          "average": 5.1988122
-        },
-        "durations": [
-          {
-            "duration": 5.1988122,
-            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/FacebookLogin.feature:8"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^Enter valid credentials$",
-    "steps": [
-      {
-        "name": "Enter valid credentials",
-        "aggregatedDurations": {
-          "median": 21.0580921,
-          "average": 21.0580921
-        },
-        "durations": [
-          {
-            "duration": 21.0580921,
-            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/FacebookLogin.feature:9"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^Verify that user is successfully logged in$",
-    "steps": [
-      {
-        "name": "Verify that user is successfully logged in",
-        "aggregatedDurations": {
-          "median": 0.0,
-          "average": 0.0
-        },
-        "durations": [
-          {
-            "duration": 0.0,
-            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/FacebookLogin.feature:10"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "source": "^Download the selected ebbok$",
-    "steps": [
-      {
-        "name": "Download the selected ebbok",
-        "aggregatedDurations": {
-          "median": 37.6410606,
-          "average": 37.6410606
-        },
-        "durations": [
-          {
-            "duration": 37.6410606,
-            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/FacebookLogin.feature:11"
+            "duration": 26.5194152,
+            "location": "file:///D:/Selenium%20Live%20Projects/slidegeeksEbooksLoginTest/./src/test/java/features/GoogleLogin.feature:5"
           }
         ]
       }
