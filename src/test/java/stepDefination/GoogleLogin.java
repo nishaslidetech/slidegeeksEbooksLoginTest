@@ -104,7 +104,7 @@ public class GoogleLogin extends SetUPClass {
 				WebElement g_login_btn1 = wait.until(ExpectedConditions
 						.elementToBeClickable(By.cssSelector("#identifierNext > div > button > span")));
 				g_login_btn1.click();
-				Thread.sleep(90000000);
+				Thread.sleep(3000);
 
 				if (!driver.findElements(By.xpath("//input[@type = 'text']")).isEmpty()) {
 					Thread.sleep(3000);
