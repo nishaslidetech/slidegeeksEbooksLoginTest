@@ -1,18 +1,24 @@
 package stepDefination;
 
+import java.io.File;
 import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import BaseClass.SetUPClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.github.bonigarcia.wdm.config.WebDriverManagerException;
+
+import net.sourceforge.tess4j.ITesseract;
+import net.sourceforge.tess4j.Tesseract;
 
 public class GoogleLogin extends SetUPClass {
 
@@ -98,6 +104,26 @@ public class GoogleLogin extends SetUPClass {
 				WebElement g_login_btn1 = wait.until(ExpectedConditions
 						.elementToBeClickable(By.cssSelector("#identifierNext > div > button > span")));
 				g_login_btn1.click();
+				Thread.sleep(3000);
+
+				if (!driver.findElements(By.xpath("//input[@type = 'text']")).isEmpty()) {
+
+					File scr = wait
+							.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@id = 'captchaimg']")))
+							.getScreenshotAs(OutputType.FILE);
+					String path = System.getProperty("user.dir") + "/screenshots/captcha.png";
+					FileHandler.copy(scr, new File(path));
+					ITesseract img = new Tesseract();
+					String imgtext = img.doOCR(new File(path));
+					WebElement captchaTextBox = wait
+							.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type = 'text']")));
+					captchaTextBox.sendKeys(imgtext);
+
+					WebElement next = wait.until(ExpectedConditions
+							.elementToBeClickable(By.cssSelector("#identifierNext > div > button > span")));
+					next.click();
+
+				}
 
 				Thread.sleep(3000);
 
