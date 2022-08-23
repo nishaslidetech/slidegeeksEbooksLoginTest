@@ -106,9 +106,9 @@ public class GoogleLogin extends SetUPClass {
 				g_login_btn1.click();
 				Thread.sleep(3000);
 
-				if (!driver.findElements(By.xpath("//input[@type = 'text']")).isEmpty()) {
+				if (!driver.findElements(By.xpath("//img[@id = 'captchaimg']")).isEmpty()) {
 					Thread.sleep(3000);
-					
+
 					File scr = wait
 							.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@id = 'captchaimg']")))
 							.getScreenshotAs(OutputType.FILE);
