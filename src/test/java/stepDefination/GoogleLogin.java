@@ -106,25 +106,25 @@ public class GoogleLogin extends SetUPClass {
 				g_login_btn1.click();
 				Thread.sleep(3000);
 
-				if (!driver.findElements(By.xpath("//img[@id = 'captchaimg']")).isEmpty()) {
-					Thread.sleep(3000);
-
-					File scr = wait
-							.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@id = 'captchaimg']")))
-							.getScreenshotAs(OutputType.FILE);
-					String captchaImg = "capthaimg" + ".png";
-					String path = System.getProperty("user.dir") + "/screenshots/" + captchaImg;
-					FileHandler.copy(scr, new File(path));
-					ITesseract img = new Tesseract();
-					String imgtext = img.doOCR(new File(path));
-					WebElement captchaTextBox = wait
-							.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type = 'text']")));
-					captchaTextBox.sendKeys(imgtext);
-
-					WebElement next = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Next")));
-					next.click();
-
-				}
+				/*
+				 * if (!driver.findElements(By.xpath("//img[@id = 'captchaimg']")).isEmpty()) {
+				 * Thread.sleep(3000);
+				 * 
+				 * File scr = wait .until(ExpectedConditions.elementToBeClickable(By.
+				 * xpath("//img[@id = 'captchaimg']"))) .getScreenshotAs(OutputType.FILE);
+				 * String captchaImg = "capthaimg" + ".png"; String path =
+				 * System.getProperty("user.dir") + "/screenshots/" + captchaImg;
+				 * FileHandler.copy(scr, new File(path)); ITesseract img = new Tesseract();
+				 * String imgtext = img.doOCR(new File(path)); WebElement captchaTextBox = wait
+				 * .until(ExpectedConditions.elementToBeClickable(By.
+				 * xpath("//input[@type = 'text']"))); captchaTextBox.sendKeys(imgtext);
+				 * 
+				 * WebElement next =
+				 * wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Next")));
+				 * next.click();
+				 * 
+				 * }
+				 */
 
 				Thread.sleep(90000000);
 				WebElement g_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
