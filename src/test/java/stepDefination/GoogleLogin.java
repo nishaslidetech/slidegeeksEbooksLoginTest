@@ -126,7 +126,7 @@ public class GoogleLogin extends SetUPClass {
 				 * }
 				 */
 
-				Thread.sleep(90000000);
+				Thread.sleep(20000);
 				WebElement g_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 						"/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input")));
 
