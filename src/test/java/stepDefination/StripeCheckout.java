@@ -21,7 +21,7 @@ public class StripeCheckout extends SetUPClass {
 	@Given("^Go to the geeks Home page$")
 	public void go_to_the_geeks_Home_page() throws Throwable {
 		driver.get(AppURL);
-		ClearBrowserCache();
+		//ClearBrowserCache();
 	}
 
 	@Then("^click on signup button$")

@@ -22,7 +22,7 @@ public class PaypalCheckout extends SetUPClass {
 	@Given("^Go to the geeks Home pagei$")
 	public void go_to_the_geeks_Home_pagei() throws Throwable {
 		driver.get(AppURL);
-		ClearBrowserCache();
+		//ClearBrowserCache();
 	}
 
 	@Then("^click on signup buttoni$")
