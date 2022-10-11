@@ -33,7 +33,9 @@ public class StripeCheckout extends SetUPClass {
 			WebElement Sign_Up = driver.findElement(By.xpath("//a[@class='signupclass']"));
 			Thread.sleep(1000);
 			Sign_Up.click();
+			Thread.sleep(1000);
 			log.info("It's opening the website URL and redirect user to sign up page");
+			driver.get("https://www.slidegeeks.com/register?222=111");
 		} catch (NoSuchElementException popup) {
 		}
 

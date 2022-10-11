@@ -35,6 +35,7 @@ public class PaypalCheckout extends SetUPClass {
 			Thread.sleep(1000);
 			Sign_Up.click();
 			log.info("It's opening the website URL and redirect user to sign up page");
+			driver.get("https://www.slidegeeks.com/register?150=000");
 		} catch (NoSuchElementException popup) {
 		}
 
