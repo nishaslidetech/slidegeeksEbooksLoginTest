@@ -68,7 +68,8 @@ public class FreeLogin extends SetUPClass {
 	@Then("^Click on Ebooks$")
 	public void click_on_Ebooks() throws Throwable {
 		try {
-			WebElement eBooks = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("EBOOKS")));
+			WebElement eBooks = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Ebooks']")));
 			eBooks.click();
 			Thread.sleep(3000);
 		} catch (WebDriverManagerException e) {
@@ -89,7 +90,6 @@ public class FreeLogin extends SetUPClass {
 			e.printStackTrace();
 		}
 
-		
 	}
 
 	@Then("^verify the checkout process$")
@@ -97,7 +97,6 @@ public class FreeLogin extends SetUPClass {
 		try {
 
 			// select paypal option
-			
 
 			Thread.sleep(2000);
 
@@ -118,7 +117,7 @@ public class FreeLogin extends SetUPClass {
 
 			String verifyTitle = driver.getTitle();
 			System.out.println("Title = " + verifyTitle);
-
+			Assert.assertTrue("user was not on the paypal page", verifyTitle.contains("Log in to your PayPal account"));
 			driver.navigate().back();
 
 		} catch (Exception e) {
@@ -131,7 +130,8 @@ public class FreeLogin extends SetUPClass {
 
 		try {
 			Thread.sleep(3000);
-			WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Logout']")));
+			WebElement logout = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Logout']")));
 			js.executeScript("arguments[0].click();", logout);
 			Thread.sleep(3000);
 		} catch (NoSuchElementException e) {
@@ -141,4 +141,3 @@ public class FreeLogin extends SetUPClass {
 	}
 
 }
-

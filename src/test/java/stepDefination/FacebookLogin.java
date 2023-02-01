@@ -27,7 +27,8 @@ public class FacebookLogin extends SetUPClass {
 	@Then("^Click on ebook button$")
 	public void click_on_ebook_button() throws Throwable {
 		try {
-			WebElement eBooks = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("EBOOKS")));
+			WebElement eBooks = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Ebooks']")));
 			Thread.sleep(3000);
 			eBooks.click();
 			Thread.sleep(3000);
@@ -94,8 +95,8 @@ public class FacebookLogin extends SetUPClass {
 				fb_pass.sendKeys("redhat2090");
 				Thread.sleep(3000);
 				try {
-					if (!driver.findElements(By.xpath("//input[@value='Log In']")).isEmpty()) {
-						driver.findElement(By.xpath("//input[@value='Log In']")).click();
+					if (!driver.findElements(By.xpath("//input[@value='Log in']")).isEmpty()) {
+						driver.findElement(By.xpath("//input[@value='Log in']")).click();
 					} else {
 						WebElement fb_login = wait.until(
 								ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='loginbutton']")));
@@ -128,13 +129,13 @@ public class FacebookLogin extends SetUPClass {
 
 	@Then("^Download the selected ebbok$")
 	public void download_the_selected_ebbok() throws Throwable {
-		
-		System.out.println("url after facebook signup = "+ driver.getCurrentUrl());
+
+		System.out.println("url after facebook signup = " + driver.getCurrentUrl());
 		Thread.sleep(2000);
 		try {
 			WebElement download = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_8']")));
-			js.executeScript("arguments[0].scrollIntoView(true);",download);
+			js.executeScript("arguments[0].scrollIntoView(true);", download);
 			Thread.sleep(2000);
 			download.click();
 			Thread.sleep(3000);

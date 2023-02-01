@@ -33,7 +33,8 @@ public class GoogleLogin extends SetUPClass {
 	@Then("^click on Ebook button$")
 	public void click_on_Ebook_button() throws Throwable {
 		try {
-			WebElement eBooks = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("EBOOKS")));
+			WebElement eBooks = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Ebooks']")));
 			eBooks.click();
 			Thread.sleep(3000);
 		} catch (WebDriverManagerException e) {
@@ -96,8 +97,8 @@ public class GoogleLogin extends SetUPClass {
 					another_btn.click();
 				}
 
-				WebElement g_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
-						"/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input")));
+				WebElement g_email = wait
+						.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='identifierId']")));
 				g_email.sendKeys("slidetech.qa@gmail.com");
 				Thread.sleep(3000);
 
@@ -127,8 +128,8 @@ public class GoogleLogin extends SetUPClass {
 				 */
 
 				Thread.sleep(20000);
-				WebElement g_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
-						"/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input")));
+				WebElement g_pass = wait
+						.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='password']")));
 
 				g_pass.sendKeys("Himanshi@123");
 

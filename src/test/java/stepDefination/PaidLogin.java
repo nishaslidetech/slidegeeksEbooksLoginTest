@@ -65,7 +65,7 @@ public class PaidLogin extends SetUPClass {
 	@Then("^Click on Ebooksii$")
 	public void click_on_Ebooksii() throws Throwable {
 		try {
-			WebElement eBooks = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("EBOOKS")));
+			WebElement eBooks = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Ebooks']")));
 			eBooks.click();
 			Thread.sleep(3000);
 		} catch (WebDriverManagerException e) {

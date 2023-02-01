@@ -22,7 +22,7 @@ public class PaypalCheckout extends SetUPClass {
 	@Given("^Go to the geeks Home pagei$")
 	public void go_to_the_geeks_Home_pagei() throws Throwable {
 		driver.get(AppURL);
-		//ClearBrowserCache();
+		// ClearBrowserCache();
 	}
 
 	@Then("^click on signup buttoni$")
@@ -68,7 +68,8 @@ public class PaypalCheckout extends SetUPClass {
 		Thread.sleep(2000);
 
 		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#register_email")));
-		new_email.clear();;
+		new_email.clear();
+		;
 		new_email.sendKeys(full_email);
 		Thread.sleep(3000);
 
@@ -105,7 +106,8 @@ public class PaypalCheckout extends SetUPClass {
 	@Then("^click on ebooks buttoni$")
 	public void click_on_ebooks_buttoni() throws Throwable {
 		try {
-			WebElement eBooks = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("EBOOKS")));
+			WebElement eBooks = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Ebooks']")));
 			Thread.sleep(4000);
 			eBooks.click();
 			Thread.sleep(4000);
@@ -161,7 +163,7 @@ public class PaypalCheckout extends SetUPClass {
 
 			String verifyTitle = driver.getTitle();
 			System.out.println("Title = " + verifyTitle);
-
+			Assert.assertTrue("user was not on the paypal page", verifyTitle.contains("Log in to your PayPal account"));
 			driver.navigate().back();
 
 		} catch (Exception e) {
@@ -173,25 +175,30 @@ public class PaypalCheckout extends SetUPClass {
 	public void delete_the_accounti() throws Throwable {
 		Thread.sleep(3000);
 
-		WebElement Account = driver.findElement(By.xpath("//a[normalize-space()='Account']"));
+		WebElement Account = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Account']")));
 		Thread.sleep(3000);
 		Account.click();
 		Thread.sleep(3000);
-		WebElement Delete_Account = driver.findElement(By.xpath("//a[normalize-space()='Delete Account']"));
+		WebElement Delete_Account = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Delete Account']")));
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].scrollIntoView();", Delete_Account);
 		Thread.sleep(3000);
 		Delete_Account.click();
 		Thread.sleep(3000);
-		WebElement Delete_Account_reason = driver.findElement(By.cssSelector("#only-free-download-product"));
+		WebElement Delete_Account_reason = wait
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#only-free-download-product")));
 		Thread.sleep(3000);
 		Delete_Account_reason.click();
 		Thread.sleep(3000);
-		WebElement Delete_Profile = driver.findElement(By.xpath("//button[@id='delete_profile']"));
+		WebElement Delete_Profile = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='delete_profile']")));
 		Thread.sleep(3000);
 		Delete_Profile.click();
 		Thread.sleep(3000);
-		WebElement No_Delete = driver.findElement(By.xpath("//button[@class='btn btn-default button_2']"));
+		WebElement No_Delete = wait.until(
+				ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn btn-default button_2']")));
 		Thread.sleep(3000);
 		No_Delete.click();
 		Thread.sleep(7000);

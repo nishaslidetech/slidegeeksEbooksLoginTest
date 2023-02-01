@@ -21,7 +21,7 @@ public class StripeCheckout extends SetUPClass {
 	@Given("^Go to the geeks Home page$")
 	public void go_to_the_geeks_Home_page() throws Throwable {
 		driver.get(AppURL);
-		//ClearBrowserCache();
+		// ClearBrowserCache();
 	}
 
 	@Then("^click on signup button$")
@@ -104,7 +104,8 @@ public class StripeCheckout extends SetUPClass {
 	@Then("^click on ebooks button$")
 	public void click_on_ebooks_button() throws Throwable {
 		try {
-			WebElement eBooks = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("EBOOKS")));
+			WebElement eBooks = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Ebooks']")));
 			Thread.sleep(3000);
 			eBooks.click();
 			Thread.sleep(4000);
