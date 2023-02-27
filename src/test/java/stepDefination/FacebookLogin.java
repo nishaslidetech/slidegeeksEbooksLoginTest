@@ -86,13 +86,13 @@ public class FacebookLogin extends SetUPClass {
 				WebElement fb_email = wait
 						.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='email']")));
 				fb_email.clear();
-				fb_email.sendKeys("sumit.kumar@slidetech.in");
+				fb_email.sendKeys("slidetech.qa@gmail.com");
 				Thread.sleep(3000);
 				WebElement fb_pass = wait
 						.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='pass']")));
 
 				fb_pass.clear();
-				fb_pass.sendKeys("redhat2090");
+				fb_pass.sendKeys("himanshi@123");
 				Thread.sleep(3000);
 				try {
 					if (!driver.findElements(By.xpath("//input[@value='Log in']")).isEmpty()) {
