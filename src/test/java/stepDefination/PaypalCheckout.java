@@ -114,7 +114,6 @@ public class PaypalCheckout extends SetUPClass {
 
 			try {
 				List<WebElement> buyNow = driver.findElements(By.xpath("//input[@value = 'BUY NOW']"));
-				js.executeScript("arguments[0].scrollIntoView(true);", buyNow);
 				buyNow.get(3).click();
 				Thread.sleep(3000);
 			} catch (WebDriverException e) {
