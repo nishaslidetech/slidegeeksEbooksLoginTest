@@ -211,7 +211,7 @@ public class PaypalCheckout extends SetUPClass {
 				.getText();
 		System.out.println("verifyText1 = " + verifyDeleteAccountMessage);
 
-		Assert.assertTrue("Your are not on paypal page",
+		Assert.assertTrue("Account is not deleted successfully",
 				verifyDeleteAccountMessage.contentEquals("Your Account has been deleted successfully."));
 		Thread.sleep(3000);
 	}

@@ -100,7 +100,7 @@ public class PaidLogin extends SetUPClass {
 		}
 		String getUrl = driver.getCurrentUrl();
 
-		Assert.assertTrue("Your are not on paypal page", actualUrl.contentEquals(getUrl));
+		Assert.assertTrue("user is not logout", actualUrl.contentEquals(getUrl));
 		Thread.sleep(3000);
 	}
 

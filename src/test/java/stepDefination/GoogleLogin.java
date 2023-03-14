@@ -182,7 +182,7 @@ public class GoogleLogin extends SetUPClass {
 
 		String getUrl = driver.getCurrentUrl();
 		System.out.println(getUrl + "=getUrl");
-		Assert.assertTrue("Your are not on paypal page", actualUrl.contentEquals(getUrl));
+		Assert.assertTrue("user is not log out", actualUrl.contentEquals(getUrl));
 		Thread.sleep(3000);
 	}
 

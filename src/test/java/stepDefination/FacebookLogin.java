@@ -163,7 +163,7 @@ public class FacebookLogin extends SetUPClass {
 
 		String getUrl = driver.getCurrentUrl();
 
-		Assert.assertTrue("Your are not on paypal page", actualUrl.contentEquals(getUrl));
+		Assert.assertTrue("use is not logged out", actualUrl.contentEquals(getUrl));
 		Thread.sleep(3000);
 
 	}
